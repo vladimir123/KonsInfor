@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
+    //create array with teachers name
     private String[] teachers = new String[]{
             "Prof., Jānis Grabis",
             "Lekt. Mārtiņš Bonders",
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> adapter;
     ListView listView;
 
+    //menu items
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -50,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_home);
                     listView.setVisibility(View.VISIBLE);
                     mTextMessage.setVisibility(View.INVISIBLE);
                     return true;
@@ -80,12 +81,14 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, teachersList); //set adapter with teachers array
         listView.setAdapter(adapter); //show teachers list
 
+        //send teacher id in list to next activity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
                 Log.e("KONS_INFO_ITEM_CLICKED", String.valueOf(position));
 
+                //start new activity with teacher id
                 Intent intent = new Intent(MainActivity.this, KonsData.class);
                 intent.putExtra("position", position);
                 startActivity(intent);

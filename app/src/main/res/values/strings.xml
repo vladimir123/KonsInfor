@@ -1,11 +1,12 @@
 <resources>
+    <!-- MENU -->
     <string name="app_name">KonsInfo</string>
-    <string name="title_home">Home</string>
-    <string name="title_about">About</string>
-
+    <string name="title_home">Sakums</string>
+    <string name="title_about">Info</string>
+    <!-- ABOUT TEXT -->
     <string name="txt_about">Par aplikāciju: Informatīva aplikācija "KonsInfo" paredzēta Informācijas tehnoloģijas institūta studentiem, lai jebkurā brīdī bez laika terēšanas varētu noskaidrot interesejoša pasniedzēja konsultāciju laikus.</string>
-
-    <string name="txt_address">Telpa</string>
-    <string name="txt_kons_time">Pieņemšanas laiks</string>
-    <string name="txt_email">Kontaktinformācija</string>
+    <!-- KONS DATA TEST -->
+    <string name="txt_address">Telpa:</string>
+    <string name="txt_kons_time">Pieņemšanas laiks:</string>
+    <string name="txt_email">Kontaktinformācija:</string>
 </resources>
