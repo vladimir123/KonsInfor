@@ -9,4 +9,6 @@
     <string name="txt_address">Telpa:</string>
     <string name="txt_kons_time">Pieņemšanas laiks:</string>
     <string name="txt_email">Kontaktinformācija:</string>
+    <!-- BUTTON ACCEPT -->
+    <string name="txt_accept">Pieteikties konsultācijai</string>
 </resources>

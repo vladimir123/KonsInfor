@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -24,6 +25,7 @@ public class KonsData extends Activity {
     TextView txt_addr;
     TextView txt_time;
     TextView txt_email;
+    Button btn_send;
 
     @SuppressLint("LongLogTag")
     @Override
@@ -41,6 +43,7 @@ public class KonsData extends Activity {
         txt_addr = (TextView)findViewById(R.id.txtAddr);
         txt_time = (TextView)findViewById(R.id.txtTime);
         txt_email = (TextView)findViewById(R.id.txtEmail);
+        btn_send = (Button)findViewById(R.id.btn_accept);
 
         //set text based on teacher id from prev. activity
         switch(position)
@@ -128,7 +131,7 @@ public class KonsData extends Activity {
         }
 
         //open installed E-mail clients on devices to send e-mail to concrete person
-        txt_email.setOnClickListener(new View.OnClickListener() {
+        btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND

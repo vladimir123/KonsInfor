@@ -77,4 +77,20 @@
             android:gravity="start"
             android:textAlignment="textStart" />
     </RelativeLayout>
+
+    <!-- ACCEPT BUTTON -->
+    <RelativeLayout
+        android:id="@+id/rlAccept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_accept" />
+    </RelativeLayout>
+
 </LinearLayout>
