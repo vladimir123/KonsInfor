@@ -1,7 +1,7 @@
 <resources>
     <!-- MENU -->
     <string name="app_name">KonsInfo</string>
-    <string name="title_home">Sakums</string>
+    <string name="title_home">Sākums</string>
     <string name="title_about">Info</string>
     <!-- ABOUT TEXT -->
     <string name="txt_about">Par aplikāciju: Informatīva aplikācija "KonsInfo" paredzēta Informācijas tehnoloģijas institūta studentiem, lai jebkurā brīdī bez laika terēšanas varētu noskaidrot interesejoša pasniedzēja konsultāciju laikus.</string>

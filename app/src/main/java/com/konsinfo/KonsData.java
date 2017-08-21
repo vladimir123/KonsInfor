@@ -5,16 +5,23 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
+import static com.konsinfo.R.id.rlTelpa;
 
 /**
  * Created by vladimir on 01.05.2017.
@@ -26,6 +33,46 @@ public class KonsData extends Activity {
     TextView txt_time;
     TextView txt_email;
     Button btn_send;
+
+    RelativeLayout rl, rt, re, ra;
+
+    private TextView mTextMessage;
+
+    //menu items
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    Intent intent = new Intent(KonsData.this, MainActivity.class);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_about:
+                    mTextMessage.setVisibility(View.VISIBLE);
+                    mTextMessage.setText(R.string.txt_about);
+
+                    rl = (RelativeLayout)findViewById(R.id.rlTelpa);
+                    rl.setVisibility(View.INVISIBLE);
+                    rt = (RelativeLayout)findViewById(R.id.rlTime);
+                    rt.setVisibility(View.INVISIBLE);
+                    re = (RelativeLayout)findViewById(R.id.rlEmail);
+                    re.setVisibility(View.INVISIBLE);
+                    ra = (RelativeLayout)findViewById(R.id.rlAccept);
+                    ra.setVisibility(View.INVISIBLE);
+
+
+                    txt_time.setVisibility(View.INVISIBLE);
+                    txt_email.setVisibility(View.INVISIBLE);
+
+//                    listView.setVisibility(View.INVISIBLE);
+                    return true;
+            }
+            return false;
+        }
+
+    };
 
     @SuppressLint("LongLogTag")
     @Override
@@ -44,6 +91,10 @@ public class KonsData extends Activity {
         txt_time = (TextView)findViewById(R.id.txtTime);
         txt_email = (TextView)findViewById(R.id.txtEmail);
         btn_send = (Button)findViewById(R.id.btn_accept);
+
+        mTextMessage = (TextView) findViewById(R.id.message_kons);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation_kons);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         //set text based on teacher id from prev. activity
         switch(position)
@@ -136,9 +187,11 @@ public class KonsData extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
                 intent.setType("text/plain");
+
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Konsultācija"); //email subject
                 intent.putExtra(Intent.EXTRA_TEXT, ""); //e-mail body
                 intent.setData(Uri.parse("mailto:"+txt_email.getText())); // or just "mailto:" for blank
+
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
                 startActivity(intent); //start new intent
             }
