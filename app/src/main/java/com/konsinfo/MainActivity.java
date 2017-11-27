@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    listView.setVisibility(View.VISIBLE);
-                    mTextMessage.setVisibility(View.INVISIBLE);
+                    Intent intent = new Intent(MainActivity.this, MenuScreen.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_about:
                     mTextMessage.setVisibility(View.VISIBLE);
