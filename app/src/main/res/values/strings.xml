@@ -11,4 +11,10 @@
     <string name="txt_email">Kontaktinformācija:</string>
     <!-- BUTTON ACCEPT -->
     <string name="txt_accept">Pieteikties konsultācijai</string>
+    <string name="btn_kons">Pasniedzēju konsultācijas</string>
+    <string name="btn_lekcii">Nodarbību grafiki</string>
+    <string name="btn_iti">Infrmācijas tehnologijas instituts</string>
+    <string name="btn_mik">Modelēšanas un imitacijas katedra</string>
+    <string name="btn_vik">Vadibas informācijas katedra</string>
+    <string name="btn_others">Citas strukturvienibas</string>
 </resources>
