@@ -67,7 +67,7 @@ public class MenuScreen extends AppCompatActivity {
         btn_kons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuScreen.this, KatedrasScreen.class);
+                Intent intent = new Intent(MenuScreen.this, Panel.class);
                 startActivity(intent);
 //                finish();
             }
