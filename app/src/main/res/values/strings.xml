@@ -13,11 +13,15 @@
     <string name="txt_accept">Pieteikties konsultācijai</string>
     <string name="btn_kons">Pasniedzēju konsultācijas</string>
     <string name="btn_lekcii">Nodarbību grafiki</string>
-    <!--<string name="btn_iti">Infrmācijas tehnologijas instituts</string>-->
+
     <string name="btn_mik">Modelēšanas un imitacijas katedra</string>
     <string name="btn_vik">Vadibas informācijas katedra</string>
     <string name="btn_others">Citas strukturvienibas</string>
 
     <string name="panel_title">Infrmācijas tehnologijas instituts</string>
-    <!--<string name="panel_title2">Citas strukturvienibas</string>-->
+
+    <string name="txt_it_caption">Vadības informācijas katedra
+Pasniedzēju pieņemšanas laiks 2017./2018. māc.g. rudens semestrī
+Pēdējās izmaiņas veiktas: 12.11.2017
+</string>
 </resources>

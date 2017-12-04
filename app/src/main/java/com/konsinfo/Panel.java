@@ -20,7 +20,7 @@ public class Panel extends AppCompatActivity {
 
     private TextView mTextMessage;
     LinearLayout lv_panel;
-    Button btn_others;
+    Button btn_others, btn_it, btn_mit;
 
     //menu items
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -54,7 +54,19 @@ public class Panel extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         lv_panel = (LinearLayout)findViewById(R.id.linearLayout);
-        btn_others = (Button)findViewById(R.id.btn_others);
         mTextMessage = (TextView)findViewById(R.id.mTextMessage);
+
+        btn_others = (Button)findViewById(R.id.btn_others);
+        btn_it = (Button)findViewById(R.id.btn_vik);
+        btn_mit = (Button)findViewById(R.id.btn_mik);
+
+        //set IT click
+        btn_it.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Panel.this, ITData.class);
+                startActivity(intent);
+            }
+        });
     }
 }
