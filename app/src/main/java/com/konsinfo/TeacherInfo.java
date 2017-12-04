@@ -31,8 +31,8 @@ public class TeacherInfo extends AppCompatActivity {
         int position = intent.getIntExtra("position", -1);
         String name = intent.getStringExtra("name");
 
-        Toast.makeText(getApplicationContext(), "position => "+position, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "name => "+name, Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "position => "+position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "name => "+name, Toast.LENGTH_LONG).show();
 
         img = (ImageView)findViewById(R.id.img);
         txt_address = (TextView)findViewById(R.id.txtAddr);
