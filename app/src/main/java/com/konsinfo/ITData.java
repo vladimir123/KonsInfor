@@ -24,10 +24,10 @@ import java.util.List;
 
 public class ITData extends AppCompatActivity {
 
-    private TextView mTextMessage;
+    private TextView mTextMessage, txtCaption;
     ListView lvTeachers;
     //create array with teachers name
-    private String[] teachers = new String[]{
+    private String[] teachers_iti = new String[]{
             "Prof., Jānis Grabis",
             "Doc. Jānis Kampars",
             "Asoc.prof. Jānis Stirna",
@@ -38,6 +38,10 @@ public class ITData extends AppCompatActivity {
             "Doc. Vineta Minkēviča",
             "Doc. Vladislavs Minkevičs"
     };
+    private String[] teachers_mit = new String[]{
+            "xuj"
+    };
+
     private List<String> teachersList;
     private ArrayAdapter<String> adapter;
 
@@ -73,12 +77,28 @@ public class ITData extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        Intent intent = getIntent();
+        final String katedra = intent.getStringExtra("katedra");
+
         mTextMessage = (TextView)findViewById(R.id.mTextMessage);
         mTextMessage.setVisibility(View.INVISIBLE);
 
+        txtCaption = (TextView)findViewById(R.id.txtCaption);
+
         lvTeachers = (ListView)findViewById(R.id.teacherList);
         teachersList = new ArrayList<>(); //init teachers array
-        Collections.addAll(teachersList, teachers); //fill teachers array
+
+        if ( katedra.equals("iti") )
+        {
+            txtCaption.setText(R.string.txt_it_caption);
+            Collections.addAll(teachersList, teachers_iti); //fill teachers array
+        }
+        else if ( katedra.equals("mit") )
+        {
+            txtCaption.setText(R.string.txt_mit_caption);
+            Collections.addAll(teachersList, teachers_mit); //fill teachers array
+        }
+
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, teachersList); //set adapter with teachers array
         lvTeachers.setAdapter(adapter); //show teachers list
 
@@ -93,6 +113,7 @@ public class ITData extends AppCompatActivity {
                 Intent intent = new Intent(ITData.this, TeacherInfo.class);
                 intent.putExtra("position", position);
                 intent.putExtra("name", teachersList.get(position));
+                intent.putExtra("katedra", katedra);
                 startActivity(intent);
             }
         });

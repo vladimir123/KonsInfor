@@ -65,6 +65,16 @@ public class Panel extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Panel.this, ITData.class);
+                intent.putExtra("katedra", "iti");
+                startActivity(intent);
+            }
+        });
+        //set MIT click
+        btn_mit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Panel.this, ITData.class);
+                intent.putExtra("katedra", "mit");
                 startActivity(intent);
             }
         });
