@@ -10,7 +10,7 @@
     <string name="txt_kons_time">Pieņemšanas laiks:</string>
     <string name="txt_email">Kontaktinformācija:</string>
     <!-- BUTTON ACCEPT -->
-    <string name="txt_accept">Pieteikties konsultācijai</string>
+    <string name="txt_accept">Pieteikties konsultācijai, izmantojot e-pastu</string>
     <string name="btn_kons">Pasniedzēju konsultācijas</string>
     <string name="btn_lekcii">Nodarbību grafiki</string>
 
