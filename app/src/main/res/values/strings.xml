@@ -8,7 +8,7 @@
     <!-- KONS DATA TEST -->
     <string name="txt_address">Telpa:</string>
     <string name="txt_kons_time">Pieņemšanas laiks:</string>
-    <string name="txt_email">Kontaktinformācija:</string>
+    <string name="txt_email">Kontakti:</string>
     <!-- BUTTON ACCEPT -->
     <string name="txt_accept">Pieteikties konsultācijai, izmantojot e-pastu</string>
     <string name="btn_kons">Pasniedzēju konsultācijas</string>
