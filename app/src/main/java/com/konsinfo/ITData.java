@@ -39,7 +39,18 @@ public class ITData extends AppCompatActivity {
             "Doc. Vladislavs Minkevičs"
     };
     private String[] teachers_mit = new String[]{
-            "xuj"
+            "Asoc. Prof. A. Romānovs",
+            "Doc., Dr.sc.ing. Arnis Lektauers",
+            "Dr.sc.ing., lektors, Arnis Kiršners",
+            "Prof. Egils Ginters",
+            "Prof. Gaļina Merkurjeva",
+            "Dr.sc.ing., docente, Inese Poļaka",
+            "Dr.habil.sc.ing., Prof. Jurijs Merkurjevs",
+            "Lektore, Dr.sc.ing. Jeļena Pečerska",
+            "Lekt. J. Čižovs",
+            "Dr.sc.ing., profesore, Ludmila Aleksejeva",
+            "Doc. Sergejs Paršutins",
+            "Lektors, Dr.sc.ing. Vitālijs Boļšakovs"
     };
 
     private List<String> teachersList;
@@ -60,8 +71,8 @@ public class ITData extends AppCompatActivity {
                 case R.id.navigation_about:
                     mTextMessage.setVisibility(View.VISIBLE);
                     mTextMessage.setText(R.string.txt_about);
-//                    lv_panel.setVisibility(View.INVISIBLE);
-//                    btn_others.setVisibility(View.INVISIBLE);
+                    txtCaption.setVisibility(View.INVISIBLE);
+                    lvTeachers.setVisibility(View.INVISIBLE);
                     return true;
             }
             return false;

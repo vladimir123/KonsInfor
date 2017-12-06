@@ -62,25 +62,25 @@
                 android:textSize="14sp"
                 android:textStyle="bold|italic" />
 
-            <TextView
-                android:id="@+id/txtAddr"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/img_spot"
-                android:layout_toStartOf="@+id/img_spot"
-                android:textAlignment="textStart" />
-
             <ImageView
                 android:id="@+id/img_spot"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 app:srcCompat="@drawable/spot"
                 tools:layout_editor_absoluteX="125dp"
                 tools:layout_editor_absoluteY="361dp" />
+
+            <TextView
+                android:id="@+id/txtAddr"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_spot"
+                android:layout_toLeftOf="@+id/img_spot"
+                android:layout_toStartOf="@+id/img_spot"
+                android:textAlignment="textStart" />
 
         </RelativeLayout>
 

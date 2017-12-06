@@ -152,6 +152,137 @@ public class TeacherInfo extends AppCompatActivity {
         else if ( katedra.equals("mit") )
         {
             Toast.makeText(getApplicationContext(), "MIT", Toast.LENGTH_LONG).show();
+
+            switch(position)
+            {
+                case 0:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.andrejs_romanovs));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-429, Rīga");
+                    txt_time.setText("Pirmdiena: (p.n.) 10:00-12:00");
+                    txt_email.setText("E-pasts: rew@itl.rtu.lv");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 1:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.arnis_lektauers));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-422, Rīga");
+                    txt_time.setText("Piektdiena: 8:30-9:30");
+                    txt_email.setText("E-pasts: arnis@itl.rtu.lv");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 2:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.arnis_kirsners));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-488, Rīga");
+                    txt_time.setText("Piektdiena: 16:30-17:30");
+                    txt_email.setText("Darba tālr.: (+371) 67089530\n" +
+                            "Fakss: (+371) 67089678\n" +
+                            "E-pasts: arnis.kirsners@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 3:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-434.telpa, Rīga");
+                    txt_time.setText("Otrdiena: 16:00-18:00 (pēc iepriekšēja pieraksta)");
+                    txt_email.setText("E-pasts: egils.ginters@rtu.lv");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 4:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.galina_merkurjeva));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-425.telpa, Rīga");
+                    txt_time.setText("Otrdiena:\n" +
+                            "16:30-18:05\n" +
+                            "(nepāra ned.)\n");
+                    txt_email.setText("Darba tālr.: (+371)  67089514\n" +
+                            "Fakss: (+371)  67089513\n" +
+                            "E-pasts: Galina.Merkurjeva@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 5:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.inese_polaka));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-460.telpa, Rīga");
+                    txt_time.setText("Otrdiena: 12:00-14:00\n" +
+                            "Piektdiena: 14:00-16:00\n");
+                    txt_email.setText("Darba tālr.: (+371) 67089530\n" +
+                            "Fakss: (+371) 67089678\n" +
+                            "E-pasts: inese.polaka@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 6:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.jurijs_merkurjevs));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-426.telpa, Rīga");
+                    txt_time.setText("Trešdiena:\n" +
+                            "(p.n.)14:00-15:00\n");
+                    txt_email.setText("Darba tālr.: (+371) 67089514\n" +
+                            "Fakss: (+371) 67089513  \t\n" +
+                            "E-pasts: Jurijs.Merkurjevs@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 7:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.jelena_pecerska));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-431.telpa, Rīga");
+                    txt_time.setText("Trešdiena: 16:30-17:30");
+                    txt_email.setText("E-pasts: jelena@itl.rtu.lv");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 8:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.jurijs_cizovs));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-460.telpa, Rīga");
+                    txt_time.setText("Ceturtdiena: 16:00–18:00");
+                    txt_email.setText("Darba tel.: (+371) 67089530\n" +
+                            "Fakss: (+371) 67089678\n" +
+                            "E-pasts: jurijs.cizovs@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 9:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.ludmila_aleksejeva));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-459.telpa, Rīga");
+                    txt_time.setText("Otrdiena: (n.n.) 15:00-17:00 \n" +
+                            "(p.n.) 16:00-17:00\n");
+                    txt_email.setText("Darba tel.: (+371) 67089589\n" +
+                            "Fakss: (+371) 67089678\n" +
+                            "E-pasts: ludmila.eleksejeva@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 10:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sergejs_parsutins));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-488, Rīga");
+                    txt_time.setText("Piektdiena: 16:00-17:30");
+                    txt_email.setText("Darba tel.: (+371) 67089530\n" +
+                            "Fakss: (+371) 67089678\n" +
+                            "E-pasts: sergejs.parsutins@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 11:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-427.telpa, Rīga");
+                    txt_time.setText("Piektdiena: 12:30-14:00");
+                    txt_email.setText("E-pasts: vitalijs.bolsakovs@rtu.lv");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+            }
         }
 
         //send e-mail
