@@ -78,5 +78,14 @@ public class Panel extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //set OTHERS click
+        btn_others.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Panel.this, ITData.class);
+                intent.putExtra("katedra", "other");
+                startActivity(intent);
+            }
+        });
     }
 }

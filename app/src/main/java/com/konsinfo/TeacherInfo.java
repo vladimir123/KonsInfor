@@ -284,6 +284,165 @@ public class TeacherInfo extends AppCompatActivity {
                 break;
             }
         }
+        else if ( katedra.equals("other") )
+        {
+            switch(position)
+            {
+                case 0:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.alla_anohina));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2 -545.kab., Rīga");
+                    txt_time.setText("Pirmdien 8:30-9:45 (katru nedēļu) un 12:30-14:00 (pāra nedēļās) (laiks iepriekš jāsaskaņo, izmantojot e-pastu)");
+                    txt_email.setText("Darba tel.: (+371) 67089595\n" +
+                            "E-pasts: alla.anohina-naumeca@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 1:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Informācija tiek aktualizēta");
+                    txt_time.setText("Informācija tiek aktualizēta");
+                    txt_email.setText("E-pasts: Aleksejs.Jurenoks@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 2:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Airisa.Steinberga@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 3:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.aigars_riekstins));
+                    txt_name.setText(name);
+                    txt_address.setText("S1-320 kab");
+                    txt_time.setText("Informācija tiek aktualizēta");
+                    txt_email.setText("E-pasts: Aigars.Riekstins@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 4:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Andrejs.Matvejevs@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 5:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Andrejs.Koliskins@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 6:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Aleksejs.Snitnikovs@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 7:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.armands_auzins));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("Tālruņis: (+371) 67089263\n" +
+                            "E-pasts: armands.auzins@rtu.lv\n");
+
+                    addr = "Riga";
+                break;
+                case 8:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Kronvalda bulvāris 1 – 225, Rīga");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("Tālruņis: +371 67089250\n" +
+                            "E-pasts: alvars.baldins@rtu.lv\n");
+
+                    addr = "Kronvalda bulvāris 1";
+                break;
+                case 9:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-148, Rīga");
+                    txt_time.setText("Informācija tiek aktualizēta");
+                    txt_email.setText("Tālrunis: (+371) 67089528\n" +
+                            "E-pasts: matem@cs.rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 10:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Irina.Eglite@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 11:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.janis_grundspenkis));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2, 550. kabinets, Rīga");
+                    txt_time.setText("Otrdienās    16.00 – 18.00 (Dekanātā, bez pieraksta)\n" +
+                            "Piektdienās 10.00 – 12.00 (Dekanātā, bez pieraksta)\n");
+                    txt_email.setText("Tālruņis: (+371) 67089581\n" +
+                            "E-pasts: Janis.Grundspeņķis@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 12:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.janis_eiduks));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2, 559. Kab., Rīga");
+                    txt_time.setText("Informācija tiek aktualizēta");
+                    txt_email.setText("E-pasts: Janis.Eiduks@cs.rtu.lv");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 13:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.katrina_bolocko));
+                    txt_name.setText(name);
+                    txt_address.setText("Daugavgrīvas iela 2-338 kab., Rīga");
+                    txt_time.setText("Pirmdienās, 12:00 – 16:00, \n" +
+                            "Otrdienās, 14:00 – 16:00,\n" +
+                            "(iepriekš piesakoties elektroniski)\n");
+                    txt_email.setText("Tālruņis: +371 67089699\n" +
+                            "E-pasts: Katrina.Bolocko@rtu.lv\n");
+
+                    addr = "Daugavgrīvas iela 2";
+                break;
+                case 14:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.marina_uhanova));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Marina.uhanova@rtu.lv");
+
+                    addr = "Riga";
+                break;
+                case 15:
+                    img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.unknown));
+                    txt_name.setText(name);
+                    txt_address.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_time.setText("Konsultācijas vieta un laiks ir jāsaskaņo ar pasniedzēju");
+                    txt_email.setText("E-pasts: Valerijs.Kunickis@rtu.lv");
+
+                    addr = "Riga";
+                break;
+            }
+        }
 
         //send e-mail
         btn_email.setOnClickListener(new View.OnClickListener() {

@@ -52,6 +52,24 @@ public class ITData extends AppCompatActivity {
             "Doc. Sergejs Paršutins",
             "Lektors, Dr.sc.ing. Vitālijs Boļšakovs"
     };
+    private String[] teachers_other = new String[]{
+            "Dr.sc.ing, asoc.prof. Alla Anohina-Naumeca",
+            "Doc. Aleksejs Jurenoks",
+            "Asoc.prof. Airisa Šteinberga",
+            "Lekt. Aigars Riekstiņš",
+            "Prof. Andrejs Matvejevs",
+            "Prof. Andrejs Koliškins",
+            "Doc. AleksejsŠņitņikovs",
+            "Dr.sc.ing., Asoc. prof. Armands Auziņš",
+            "Asoc. prof. Dr. sc. pol. Alvars Baldiņš",
+            "prof. I.Volodko",
+            "Doc. Irīna Eglīte",
+            "Dr.habil.sc.ing., profesors Jānis Grundspeņķis",
+            "Prof. Jānis Eiduks",
+            "Doc. K.Boločko",
+            "Asoc.prof. Marina Uhanova",
+            "Doc. Valerijs Kuņickis"
+    };
 
     private List<String> teachersList;
     private ArrayAdapter<String> adapter;
@@ -108,6 +126,11 @@ public class ITData extends AppCompatActivity {
         {
             txtCaption.setText(R.string.txt_mit_caption);
             Collections.addAll(teachersList, teachers_mit); //fill teachers array
+        }
+        else if ( katedra.equals("other") )
+        {
+            txtCaption.setText(R.string.txt_other_caption);
+            Collections.addAll(teachersList, teachers_other); //fill teachers array
         }
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, teachersList); //set adapter with teachers array
