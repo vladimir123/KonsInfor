@@ -69,7 +69,6 @@ public class MenuScreen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MenuScreen.this, Panel.class);
                 startActivity(intent);
-//                finish();
             }
         });
 
@@ -77,7 +76,8 @@ public class MenuScreen extends AppCompatActivity {
         btn_lekcii.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ///
+                Intent intent = new Intent(MenuScreen.this, NodarbibasScreen.class);
+                startActivity(intent);
             }
         });
     }

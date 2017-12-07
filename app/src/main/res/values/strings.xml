@@ -4,7 +4,7 @@
     <string name="title_home">Sakums</string>
     <string name="title_about">Info</string>
     <!-- ABOUT TEXT -->
-    <string name="txt_about">Par aplikāciju: Informatīva aplikācija "KonsInfo" paredzēta Informācijas tehnoloģijas institūta studentiem, lai jebkurā brīdī bez laika terēšanas varētu noskaidrot interesejoša pasniedzēja konsultāciju laikus.</string>
+    <string name="txt_about">Par aplikāciju: Informatīva aplikācija "KonsInfo" paredzēta Informācijas tehnoloģijas institūta studentiem, lai jebkurā brīdī bez laika terēšanas varētu noskaidrot interesejoša pasniedzēja konsultāciju laikus un nodarbību grafikus. Uzspiežot pogu „Pieteikties konsultācijai” ir iespēja sazināties ar pasniedzēju, izmantojot e-pastu.</string>
     <!-- KONS DATA TEST -->
     <string name="txt_address">Telpa:</string>
     <string name="txt_kons_time">Pieņemšanas laiks:</string>
@@ -19,6 +19,7 @@
     <string name="btn_others">Citas strukturvienibas</string>
 
     <string name="panel_title">Infrmācijas tehnologijas instituts</string>
+    <string name="nodarb_title">Nodarbību grafiki</string>
 
     <string name="txt_it_caption">Vadības informācijas katedra
 Pasniedzēju pieņemšanas laiks 2017./2018. māc.g. rudens semestrī
@@ -34,5 +35,9 @@ Pēdējās izmaiņas veiktas: 12.11.2017
 Pasniedzēju pieņemšanas laiks 2017./2018. māc.g. rudens semestrī
 Pēdējās izmaiņas veiktas: 07.11.2017
     </string>
+
+    <string name="btn_bak_text">Bakalauriem</string>
+    <string name="btn_ak_mag_text">Akadēmiskajiem maģistriem</string>
+    <string name="btn_pro_mag_text">Profesionālajiem maģistriem</string>
 
 </resources>
