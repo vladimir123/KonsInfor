@@ -151,7 +151,7 @@ public class TeacherInfo extends AppCompatActivity {
         }
         else if ( katedra.equals("mit") )
         {
-            Toast.makeText(getApplicationContext(), "MIT", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "MIT", Toast.LENGTH_LONG).show();
 
             switch(position)
             {
@@ -448,7 +448,7 @@ public class TeacherInfo extends AppCompatActivity {
         btn_email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "email => "+txt_email.getText(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "email => "+txt_email.getText(), Toast.LENGTH_LONG).show();
                 //get e_mail from contacts
                 String[] contacts = txt_email.getText().toString().split("E-pasts:");
                 String e_mail = contacts[1].trim();

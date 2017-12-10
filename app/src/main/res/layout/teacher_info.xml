@@ -21,142 +21,133 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="224dp"
-        android:layout_height="214dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
         app:srcCompat="@drawable/splash_logo" />
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:scrollIndicators="none"
         app:layout_constraintBottom_toTopOf="@+id/btn_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/img"
+        tools:layout_editor_absoluteX="0dp">
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
+        <!-- TELPA -->
+        <RelativeLayout
+            android:id="@+id/rlTelpa"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/btn_email"
-            tools:layout_editor_absoluteX="0dp">
+            android:background="@drawable/border"
+            android:padding="5dp">
 
-            <!-- TELPA -->
-            <RelativeLayout
-                android:id="@+id/rlTelpa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:padding="5dp">
-
-                <TextView
-                    android:id="@+id/txtAddrTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/txt_address"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic" />
-
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_alignParentTop="true"-->
-                app:srcCompat="@drawable/spot"
-                tools:layout_editor_absoluteX="125dp"
-                tools:layout_editor_absoluteY="361dp" />
-
-                <ImageView
-                    android:id="@+id/img_spot"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    app:srcCompat="@drawable/spot" />
-
-                <TextView
-                    android:id="@+id/txtAddr"
-                    android:layout_width="200dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_toLeftOf="@+id/img_spot"
-                    android:layout_toStartOf="@+id/img_spot"
-                    android:textAlignment="center" />
-
-            </RelativeLayout>
-
-            <!-- PIENEMSANAS LAIKS -->
-            <RelativeLayout
-                android:id="@+id/rlTime"
+            <TextView
+                android:id="@+id/txtAddrTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:padding="5dp">
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txt_address"
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
 
-                <TextView
-                    android:id="@+id/txtTimeTitle"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/txt_kons_time"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic" />
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            app:srcCompat="@drawable/spot"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="361dp" />
 
-                <TextView
-                    android:id="@+id/txtTime"
-                    android:layout_width="210dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentRight="true"
-                    android:textAlignment="viewEnd" />
-            </RelativeLayout>
+            <ImageView
+                android:id="@+id/img_spot"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/spot" />
 
-            <!-- E-MAIL -->
-            <RelativeLayout
-                android:id="@+id/rlEmail"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/txtAddr"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:padding="5dp">
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/img_spot"
+                android:layout_toStartOf="@+id/img_spot"
+                android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/txtEmailTitle"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/txt_email"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic" />
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/txtEmail"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:gravity="start"
-                    android:textAlignment="textStart" />
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
+        <!-- PIENEMSANAS LAIKS -->
+        <RelativeLayout
+            android:id="@+id/rlTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtTimeTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txt_kons_time"
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textAlignment="viewEnd" />
+        </RelativeLayout>
+
+        <!-- E-MAIL -->
+        <RelativeLayout
+            android:id="@+id/rlEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtEmailTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="@string/txt_email"
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="start"
+                android:textAlignment="textStart" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--</ScrollView>-->
 
     <Button
         android:id="@+id/btn_email"
@@ -167,6 +158,7 @@
         android:layout_marginStart="8dp"
         android:text="@string/txt_accept"
         android:textAlignment="center"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
