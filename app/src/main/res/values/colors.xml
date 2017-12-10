@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <item name="blue" type="color">#FF33B5E5</item>
 </resources>
