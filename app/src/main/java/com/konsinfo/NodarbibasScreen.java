@@ -28,5 +28,19 @@ public class NodarbibasScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btn_ak_mag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NodarbibasScreen.this, AkMagScreen.class);
+                startActivity(intent);
+            }
+        });
+        btn_pro_mag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NodarbibasScreen.this, ProMagScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -36,7 +36,7 @@ public class BakScreen extends AppCompatActivity {
         gr_3_3 = (TextView)findViewById(R.id.gr_3_3);
         gr_3_4 = (TextView)findViewById(R.id.gr_3_4);
 
-
+        //click on group course
         gr_1_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,8 +68,59 @@ public class BakScreen extends AppCompatActivity {
             }
         });
 
-    }
 
+        gr_2_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("1", "2");
+            }
+        });
+        gr_2_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("2", "2");
+            }
+        });
+        gr_2_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("3", "2");
+            }
+        });
+        gr_2_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("4", "2");
+            }
+        });
+
+        gr_3_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("1", "3");
+            }
+        });
+        gr_3_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("2", "3");
+            }
+        });
+        gr_3_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("3", "3");
+            }
+        });
+        gr_3_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShowGraffik("4", "3");
+            }
+        });
+
+    }
+    //function for display nodarbibas grafik
     private void ShowGraffik(String group, String course)
     {
         Intent intent = new Intent(BakScreen.this, GraffikScreen.class);

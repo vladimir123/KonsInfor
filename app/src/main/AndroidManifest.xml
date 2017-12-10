@@ -74,6 +74,24 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <!-- AKADEM MAG ACTIVITY -->
+        <activity
+            android:name=".AkMagScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- PRO MAG ACTIVITY -->
+        <activity
+            android:name=".ProMagScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <!-- GRAFFIK ACTIVITY -->
         <activity
             android:name=".GraffikScreen"
