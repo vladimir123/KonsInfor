@@ -40,9 +40,9 @@ public class TeacherInfo extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         String katedra = intent.getStringExtra("katedra");
 
-        Toast.makeText(getApplicationContext(), "position => "+position, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), "name => "+name, Toast.LENGTH_LONG).show();
-        Toast.makeText(getApplicationContext(), "katedra => "+katedra, Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "position => "+position, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), "name => "+name, Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "katedra => "+katedra, Toast.LENGTH_LONG).show();
 
         img = (ImageView)findViewById(R.id.img);
         txt_address = (TextView)findViewById(R.id.txtAddr);

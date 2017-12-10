@@ -30,128 +30,169 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="68dp"
         android:text="3. kurss"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/gr_1_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
+        android:layout_marginTop="60dp"
         android:text="1."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gr_1_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:text="2."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_1_1"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gr_1_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
         android:text="3."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_1_2"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gr_1_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:text="4."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_1_3"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gr_1_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
         android:text="5."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_1_4"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gr_2_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
+        android:layout_marginTop="68dp"
         android:text="1."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintTop_toBottomOf="@+id/gr_1_1" />
 
     <TextView
         android:id="@+id/gr_2_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="68dp"
         android:text="2."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_2_1"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintTop_toBottomOf="@+id/gr_1_2" />
 
     <TextView
         android:id="@+id/gr_2_3"
-        android:layout_width="0dp"
+        android:layout_width="13dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
         android:text="3."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_2_2"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintTop_toBottomOf="@+id/gr_1_3" />
 
     <TextView
         android:id="@+id/gr_2_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="68dp"
         android:text="4."
+        android:textColor="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/gr_2_3"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintTop_toBottomOf="@+id/gr_1_4" />
 
     <TextView
         android:id="@+id/gr_3_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="44dp"
+        android:layout_marginTop="64dp"
         android:text="1."
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        tools:layout_editor_absoluteY="233dp" />
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/gr_2_1"
+        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/gr_3_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
         android:text="2."
-        app:layout_constraintStart_toEndOf="@+id/gr_2_1"
-        tools:layout_editor_absoluteY="233dp" />
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gr_3_1"
+        app:layout_constraintTop_toBottomOf="@+id/gr_2_2"
+        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/gr_3_3"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
         android:text="3."
-        app:layout_constraintStart_toEndOf="@+id/gr_2_2"
-        tools:layout_editor_absoluteY="233dp" />
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gr_3_2"
+        app:layout_constraintTop_toBottomOf="@+id/gr_2_3"
+        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/gr_3_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
         android:text="4."
-        app:layout_constraintStart_toEndOf="@+id/gr_2_3"
-        tools:layout_editor_absoluteY="233dp" />
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gr_3_3"
+        app:layout_constraintTop_toBottomOf="@+id/gr_2_4"
+        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/textView12"
@@ -159,10 +200,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
         android:text="Grupas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/gr_1_5"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
@@ -173,7 +216,7 @@
         android:layout_marginTop="68dp"
         android:text="Grupas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toEndOf="@+id/gr_2_4"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -181,12 +224,14 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:text="Grupas"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toEndOf="@+id/gr_3_4"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.011" />
 </android.support.constraint.ConstraintLayout>
