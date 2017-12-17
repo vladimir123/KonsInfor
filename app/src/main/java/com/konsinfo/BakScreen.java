@@ -5,7 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 /**
  * Created by vladimir on 08.12.2017.
@@ -13,115 +19,91 @@ import android.widget.TextView;
 
 public class BakScreen extends AppCompatActivity {
 
-    TextView gr_1_1, gr_1_2, gr_1_3, gr_1_4, gr_1_5, gr_2_1, gr_2_2, gr_2_3, gr_2_4, gr_3_1, gr_3_2, gr_3_3, gr_3_4;
+    Spinner sp_kurss, sp_gruppa;
+    private String[] kurss = { "=== Izveleties Kursu ===", "1.kurss", "2.kurss", "3.kurss" };
+    ArrayList<String> gruppas;
+    ArrayAdapter<String> gruppa_adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bak_screen);
 
-        gr_1_1 = (TextView)findViewById(R.id.gr_1_1);
-        gr_1_2 = (TextView)findViewById(R.id.gr_1_2);
-        gr_1_3 = (TextView)findViewById(R.id.gr_1_3);
-        gr_1_4 = (TextView)findViewById(R.id.gr_1_4);
-        gr_1_5 = (TextView)findViewById(R.id.gr_1_5);
+        sp_kurss = (Spinner)findViewById(R.id.sp_course);
+        sp_gruppa = (Spinner)findViewById(R.id.sp_groups);
 
-        gr_2_1 = (TextView)findViewById(R.id.gr_2_1);
-        gr_2_2 = (TextView)findViewById(R.id.gr_2_2);
-        gr_2_3 = (TextView)findViewById(R.id.gr_2_3);
-        gr_2_4 = (TextView)findViewById(R.id.gr_2_4);
+        //set dropdown with data for course select
+        ArrayAdapter<String> kurs_adapter = new ArrayAdapter<String>(BakScreen.this, android.R.layout.simple_spinner_item, kurss);
+        kurs_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_kurss.setAdapter(kurs_adapter);
 
-        gr_3_1 = (TextView)findViewById(R.id.gr_3_1);
-        gr_3_2 = (TextView)findViewById(R.id.gr_3_2);
-        gr_3_3 = (TextView)findViewById(R.id.gr_3_3);
-        gr_3_4 = (TextView)findViewById(R.id.gr_3_4);
+        sp_kurss.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), "item => "+position, Toast.LENGTH_LONG).show();
 
-        //click on group course
-        gr_1_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("1", "1");
-            }
-        });
-        gr_1_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("2", "1");
-            }
-        });
-        gr_1_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("3", "1");
-            }
-        });
-        gr_1_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("4", "1");
-            }
-        });
-        gr_1_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("5", "1");
-            }
-        });
+                //set second dropdown's data
+                switch(position)
+                {
+                    case 1:
+                        gruppas = new ArrayList<String>();
+                        gruppas.add("1.grupa");
+                        gruppas.add("2.grupa");
+                        gruppas.add("3.grupa");
+                        gruppas.add("4.grupa");
+                        gruppas.add("5.grupa");
+                        //display data based on first drop's choice
+                        gruppa_adapter = new ArrayAdapter<String>(BakScreen.this, android.R.layout.simple_spinner_item, gruppas);
+                        gruppa_adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+                        sp_gruppa.setAdapter(gruppa_adapter);
+                        sp_gruppa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                                Toast.makeText(getApplicationContext(), "group selected position => "+position+" id => "+id, Toast.LENGTH_LONG).show();
 
+//                                ShowGraffik((int) id, 1);
+                            }
 
-        gr_2_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("1", "2");
-            }
-        });
-        gr_2_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("2", "2");
-            }
-        });
-        gr_2_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("3", "2");
-            }
-        });
-        gr_2_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("4", "2");
-            }
-        });
+                            @Override
+                            public void onNothingSelected(AdapterView<?> adapterView) {
 
-        gr_3_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("1", "3");
+                            }
+                        });
+                    break;
+                    case 2:
+                        gruppas = new ArrayList<String>();
+                        gruppas.add("1.grupa");
+                        gruppas.add("2.grupa");
+                        gruppas.add("3.grupa");
+                        gruppas.add("4.grupa");
+                        //display data based on first drop's choice
+                        gruppa_adapter = new ArrayAdapter<String>(BakScreen.this, android.R.layout.simple_spinner_item, gruppas);
+                        gruppa_adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+                        sp_gruppa.setAdapter(gruppa_adapter);
+                    break;
+                    case 3:
+                        gruppas = new ArrayList<String>();
+                        gruppas.add("1.grupa");
+                        gruppas.add("2.grupa");
+                        gruppas.add("3.grupa");
+                        gruppas.add("4.grupa");
+                        //display data based on first drop's choice
+                        gruppa_adapter = new ArrayAdapter<String>(BakScreen.this, android.R.layout.simple_spinner_item, gruppas);
+                        gruppa_adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+                        sp_gruppa.setAdapter(gruppa_adapter);
+                    break;
+                }
             }
-        });
-        gr_3_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("2", "3");
-            }
-        });
-        gr_3_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("3", "3");
-            }
-        });
-        gr_3_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowGraffik("4", "3");
-            }
-        });
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
+
     //function for display nodarbibas grafik
-    private void ShowGraffik(String group, String course)
+    private void ShowGraffik(int group, int course)
     {
         Intent intent = new Intent(BakScreen.this, GraffikScreen.class);
         intent.putExtra("gruppa", group);

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\AndroidRepos\KonsInfor\KonsInfo.iml" filepath="D:\AndroidRepos\KonsInfor\KonsInfo.iml" />
       <module fileurl="file://$PROJECT_DIR$/KonsInfor.iml" filepath="$PROJECT_DIR$/KonsInfor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
