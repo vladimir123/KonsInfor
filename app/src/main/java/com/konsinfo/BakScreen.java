@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ public class BakScreen extends AppCompatActivity {
     ArrayList<String> gruppas;
     ArrayAdapter<String> gruppa_adapter;
     ImageView img;
+    boolean isImageFitToScreen;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -128,6 +131,26 @@ public class BakScreen extends AppCompatActivity {
                 {
                     case 1:
                         img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.b_gr_1_1));
+                        //TODO: check for resize in Constrain
+                        img.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                if(isImageFitToScreen) {
+                                    isImageFitToScreen=false;
+//                                    img.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//                                    ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(365, 450);
+//                                    params.setMargins(img.getLeft()-30, img.getTop()-30, img.getRight()+30, img.getBottom()+30);
+                                    img.setLayoutParams(new ConstraintLayout.LayoutParams(365, 450));
+//                                    img.setLayoutParams(params);
+                                    img.setAdjustViewBounds(true);
+                                }else{
+                                    isImageFitToScreen=true;
+//                                    img.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                                    img.setLayoutParams(new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_CONSTRAINT, ConstraintLayout.LayoutParams.MATCH_CONSTRAINT));
+                                    img.setScaleType(ImageView.ScaleType.FIT_XY);
+                                }
+                            }
+                        });
                     break;
                     case 2:
                         img.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.b_gr_1_2));
