@@ -92,8 +92,10 @@
             </intent-filter>
         </activity>
         <!-- GRAFFIK ACTIVITY -->
+        <!-- FULL IMAGE ACTIVITY -->
         <activity
-            android:name=".GraffikScreen"
+            android:name=".FullScreenImage"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
